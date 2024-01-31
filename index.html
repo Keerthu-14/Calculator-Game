@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(68, 216, 167);
+            gap: 25px;
+            flex-direction: column;
+            font-family: 'Afacad', sans-serif;
+        }
+        input{
+            width: 300px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            font-size: 24px;
+        }
+        button{
+            width: 150px;
+            min-height: 40px;
+            outline: none;
+            font-size: 24px;
+            border-radius: 10px;
+            border: none;
+        }
+        h1{
+            font-size: 100px;
+            margin-bottom: 10px;
+        }
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 24px;
+            margin: -5px;
+        }
+        .dark-mode{
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .btn{
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello there..!</h1>
+    <h2>Total Triumphs: Unleash the Power of Precision!</h2>
+    <input id="num1" >
+    <input id="num2" >
+    <button onclick="clickFunction()">Add</button>
+    <p id="result">Result</p>
+    <button onclick="toggleBtn()" class="btn">Toggle Here</button>
+
+    
+
+    <script>
+        var input1 = document.getElementById("num1")
+        var input2 = document.getElementById("num2")
+        var result = document.getElementById("result")
+
+         
+
+        function clickFunction(){
+         var input1value = Number(input1.value)
+         var input2value = Number(input2.value)
+
+         var total = input1value + input2value
+         
+         result.textContent = total
+        }
+        function toggleBtn(){
+            document.body.classList.toggle('dark-mode');
+        }
+
+    
+
+
+
+
+    </script>
+</body>
+</html>
